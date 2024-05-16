@@ -22,6 +22,11 @@
     ;;;;;;;;;;;;;;;;;;;;;;;;;;
 
     (defun runs-every-frame ()
+      (let ((r (region-lookup-by-id 681)))
+        (when r
+          (set! (-> r on-enter) '(when (not (task-closed? "consite-find-baron-resolution")) (scene-play "consite-find-baron-res")))  ;; consite skip allowed
+          )
+        )
       ;; (increase-power-cell-by-one) This is a call to increase-power-cell-by-one defined in mod-common-functions.gc
 
       ;; Sample code to turn jak pink whenever he's doing the jetboard hover glitch
