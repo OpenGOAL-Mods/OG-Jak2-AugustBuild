@@ -22,13 +22,15 @@ jobs:
     uses: open-goal/mod-bundling-tools/.github/workflows/mod-bundler.yml@v1
     with:
       semverBump: ${{ inputs.bump }}
-      metadataName: "Test Mod Bundle"
-      metadataDescription: "This is a test mod bundle. 2"
-      metadataSupportedGames: "jak1"
-      metadataAuthors: "barg,vaser"
-      metadataTags: "rng,gameplay-mod"
-      metadataWebsiteUrl: "https://www.example.com/this/is/optional"
-      toolingRepo: "OpenGOAL-Mods/OG-Mod-Base"
+      metadataName: "Jak II - August Build"
+      metadataDescription: "Mimics the Jak II August 2003 Review build which allows for consite skip"
+      metadataSupportedGames: "jak2"
+      metadataAuthors: "barg,zed"
+      metadataTags: "speedrunning,gameplay-mod"
+      metadataWebsiteUrl: "https://github.com/OpenGOAL-Mods/OG-Jak2-AugustBuild/blob/main/README.md"
+      skipMacOS: true
+      skipLinux: true
+      toolingBinaryDir: "out/build/Release/bin"
       gameAssetsDir: "game/assets"
     secrets:
       token: ${{ secrets.GITHUB_TOKEN }}
