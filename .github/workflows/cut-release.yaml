@@ -28,9 +28,7 @@ jobs:
       metadataAuthors: "barg,zed"
       metadataTags: "speedrunning,gameplay-mod"
       metadataWebsiteUrl: "https://github.com/OpenGOAL-Mods/OG-Jak2-AugustBuild/blob/main/README.md"
-      skipMacOS: true
-      skipLinux: true
-      toolingBinaryDir: "out/build/Release/bin"
+      toolingRepo: "OpenGOAL-Mods/OG-Mod-Base"
       gameAssetsDir: "game/assets"
     secrets:
       token: ${{ secrets.GITHUB_TOKEN }}
